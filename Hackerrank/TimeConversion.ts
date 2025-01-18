@@ -45,3 +45,4 @@ function timeConversion(s: string): String {
 
 var time = "11:40:03AM"
 console.log(timeConversion(time))
+export let x = 123;

@@ -35,3 +35,4 @@ let inputArray: number[] = [1,3,5,7,9];
 console.log(miniMaxSum(inputArray));
 export let x = 123;
 
+

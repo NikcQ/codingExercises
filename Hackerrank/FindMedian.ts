@@ -22,5 +22,4 @@ function findMedian(arr: number[]): number {
 
 console.log(findMedian(aa))
 export let x = 123;
-
 //this was easy

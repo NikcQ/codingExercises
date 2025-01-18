@@ -16,7 +16,7 @@ function miniMaxSum(arr: number[]): void {
     // Looping throug the array we can subtract each number
     // from the sum to get the five possible sums
 
-    for(let i = 0; i < arr.length ; i++){
+    for(const i in arr){
         resultArray.push(sum - arr[i]);
     }
 

@@ -12,8 +12,8 @@ function countingSort(arr: number[]): number[] {
   let countedArray = Array(100).fill(0); // idek why this throws an error but it does work
   // Anywho, creates a size 100 array filled with zeroes
 
-  for (let index = 0; index < arr.length; index++) {
-    countedArray[arr[index]] = countedArray[arr[index]] + 1; // self explanatory
+  for (let i in arr) {
+    countedArray[arr[i]] = countedArray[arr[i]] + 1; // self explanatory
   }
 
   return countedArray

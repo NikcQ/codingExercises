@@ -12,7 +12,7 @@ function plusMinus(arr: number[]): void {
     let zeroDelta = 0;
 
 
-  for (let i = 0; i <= arr.length; i++) {
+  for (const i in arr) {
     if (arr[i] > 0) { //if current index is positive
         positiveDelta++
     }

@@ -9,7 +9,7 @@
 
 function countingSort(arr: number[]): number[] {
   // Write your code here
-  let countedArray = Array(100).fill(0); // idek why this throws an error but it does work
+  let countedArray: number[] = Array(100).fill(0); // idek why this throws an error but it does work
   // Anywho, creates a size 100 array filled with zeroes
 
   for (let i in arr) {

@@ -64,6 +64,10 @@ function betterDiagonal(arr: number[][]): number {
 function evenBetter(arr: number[][]): number { // O(n) Even better
   let diagonalSum: number[] = [0, 0];
 
+  // Since it's a diagonal, that means that i === j so we can get rid of
+  // the second for-loop and we can also drop the len variable and just math it
+  // directly into the indexes.
+
   for (let i = 0; i < arr.length; i++) {
     diagonalSum[0] += arr[i][i];
     diagonalSum[1] += arr[i][arr.length - i - 1];

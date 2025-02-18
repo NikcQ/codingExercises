@@ -6,8 +6,8 @@
 // j is the X axis (horizontal)
 // i is the Y axis (vertical)
 
-function diagonalDifference(arr: number[][]): number { // O(n^4) I know i can make this better
-  
+function diagonalDifference(arr: number[][]): number {
+  // O(n^4) I know i can make this better
 
   // Array to store diagonal's sums
   let diagonalSum: number[] = [];
@@ -44,23 +44,32 @@ function diagonalDifference(arr: number[][]): number { // O(n^4) I know i can ma
   return Math.abs(diagonalSum[0] - diagonalSum[1]); // Return the positive number
 }
 
-function betterDiagonal(arr: number[][]): number {  // O(n^2) Way better
+function betterDiagonal(arr: number[][]): number {
+  // O(n^2) Way better
 
-  let diagonalSum: number[] = [0,0]; // Initialising the array eliminates if statement
+  let diagonalSum: number[] = [0, 0]; // Initialising the array eliminates if statement
   let len = arr.length - 1; // array index
 
   for (let i = 0; i < arr.length; i++) {
     for (let j = i; j < arr.length; j++) {
-
-        diagonalSum[0] += arr[i][j];
-        diagonalSum[1] += arr[i][len - j];// i just take the opposite side and that's it 
-        // i only traverse one time
-
+      diagonalSum[0] += arr[i][j];
+      diagonalSum[1] += arr[i][len - j]; // i just take the opposite side and that's it
+      // i only traverse one time
+    }
   }
-}
 
   return Math.abs(diagonalSum[0] - diagonalSum[1]);
+}
 
+function evenBetter(arr: number[][]): number { // O(n) Even better
+  let diagonalSum: number[] = [0, 0];
+
+  for (let i = 0; i < arr.length; i++) {
+    diagonalSum[0] += arr[i][i];
+    diagonalSum[1] += arr[i][arr.length - i - 1];
+  }
+
+  return Math.abs(diagonalSum[0] - diagonalSum[1]);
 }
 
 var input: number[][] = [
@@ -71,5 +80,6 @@ var input: number[][] = [
 
 console.log(diagonalDifference(input));
 console.log(betterDiagonal(input));
-console.log(diagonalDifference(input) === betterDiagonal(input) ? true : false);
+console.log(evenBetter(input));
+console.log(diagonalDifference(input) === betterDiagonal(input) && betterDiagonal(input) === evenBetter(input) ? true : false);
 export let a = 123;

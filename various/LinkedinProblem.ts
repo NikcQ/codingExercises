@@ -4,23 +4,12 @@
 //input is: "aaaabbbcca"
 //output is: ["("a",4)", "("b",3)", "("c",2)", "("a",1)", ]
 
-function linkedIn(input: String): String[]{
+//Given a string, create a function that returns an array of strings
+//which follow the pattern above.
+//figure it out mate, YES you must use Typescript.
 
-    if(!input){
-        return[]
-    }
+//eat shit <3, NikcQ
 
-    let counterArray: String[] = [];
-    let letterArray = [];
-    let array = input.split("");
-    let counter = 0;
-    
-
-    for (let i = 0; i < array.length; i++) {
-
-        letterArray[letterArray.length-1] === array[i]
-        
-    }
-
-    return []
+function RepeatCounter(input: String): String[]{
+    return[] //modify the return statement accordingly!
 }
